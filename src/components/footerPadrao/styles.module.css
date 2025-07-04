@@ -17,14 +17,14 @@
 }
 
 .footerSection h3 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .footerSection h4 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -52,7 +52,7 @@
 }
 
 .footerSection ul li a:hover {
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .footerSocial {
@@ -66,17 +66,17 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid #00d4ff;
+  background: rgba(0, 122, 255, 0.1);
+  border: 1px solid #007aff;
   border-radius: 50%;
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .footerSocial a:hover {
-  background: #00d4ff;
+  background: #007aff;
   color: #000;
   transform: translateY(-2px);
 }
@@ -85,7 +85,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
@@ -96,25 +96,7 @@
   margin: 0;
 }
 
-.madeWith {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
-.heart {
-  color: #ff6b6b;
-  animation: heartbeat 2s infinite;
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
 
 @media (max-width: 768px) {
   .footerContent {

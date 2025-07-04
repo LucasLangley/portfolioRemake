@@ -21,7 +21,7 @@
 }
 
 .sectionHeader h2 span {
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .sectionHeader p {
@@ -39,7 +39,7 @@
 }
 
 .contactInfo h3 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -62,15 +62,15 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.1);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .contactItem:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
   transform: translateY(-3px);
 }
 
@@ -80,7 +80,7 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: #00d4ff;
+  background: #007aff;
   border-radius: 50%;
   color: #000;
   font-size: 1.2rem;
@@ -102,7 +102,7 @@
 }
 
 .contactText a:hover {
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .socialLinks h4 {
@@ -122,24 +122,24 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 2px solid #00d4ff;
+  background: rgba(0, 122, 255, 0.1);
+  border: 2px solid #007aff;
   border-radius: 50%;
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
-  background: #00d4ff;
+  background: #007aff;
   color: #000;
   transform: translateY(-3px);
 }
 
 .contactForm {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.1);
   border-radius: 15px;
   padding: 2rem;
 }
@@ -174,8 +174,8 @@
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: #00d4ff;
-  background: rgba(0, 212, 255, 0.05);
+  border-color: #007aff;
+  background: rgba(0, 122, 255, 0.05);
 }
 
 .formGroup textarea {
@@ -186,7 +186,7 @@
 .submitBtn {
   width: 100%;
   padding: 1rem 2rem;
-  background: #00d4ff;
+  background: #007aff;
   color: #000;
   border: none;
   border-radius: 8px;
@@ -197,7 +197,7 @@
 }
 
 .submitBtn:hover:not(:disabled) {
-  background: #00b8e6;
+  background: #0056cc;
   transform: translateY(-2px);
 }
 

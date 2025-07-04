@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import styles from './styles.module.css';
 
 const Experience = () => {
@@ -10,13 +10,13 @@ const Experience = () => {
       role: 'Desenvolvedor Front-end',
       period: 'Março/2024',
       description: [
-        'Criação de portfólio utilizando HTML, CSS e JavaScript',
+        'Criação de portfólio utilizando React, CSS e JavaScript',
         'Implementação de design responsivo e interativo',
         'Hospedagem e deploy na plataforma Netlify',
         'Otimização para diferentes dispositivos',
         'Apresentação de projetos e habilidades técnicas'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Netlify'],
+      technologies: ['React', 'CSS', 'JavaScript', 'Netlify'],
       link: 'https://boroto.netlify.app/',
       github: null
     },
@@ -69,6 +69,21 @@ const Experience = () => {
       technologies: ['Flutter', 'Dart', 'Firebase', 'Gamificação'],
       link: null,
       github: null
+    },
+    {
+      title: 'Desenvolvedor Full Stack',
+      role: 'Hermanos T.I',
+      period: 'Junho/2025 - Atualmente',
+      description: [
+        'Atuação como desenvolvedor full stack com foco no front-end',
+        'Desenvolvimento de aplicações web utilizando React',
+        'Trabalho em equipe com metodologias ágeis',
+        'Manutenção e evolução de sistemas existentes',
+        'Desenvolvimento e manutenção de bancos de dados Oracle'
+      ],
+      technologies: ['React', 'JavaScript', 'Full Stack', 'Metodologias Ágeis'],
+      link: null,
+      github: null
     }
   ];
 
@@ -116,14 +131,8 @@ const Experience = () => {
                 </div>
 
                 <div className={styles.experienceLinks}>
-                  {exp.link && (
-                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className={styles.linkBtn}>
-                      <FaExternalLinkAlt />
-                      Ver Projeto
-                    </a>
-                  )}
                   {exp.github && (
-                    <a href={exp.github} target="_blank" rel="noopener noreferrer" className={`${styles.linkBtn} ${styles.github}`}>
+                    <a href={exp.github} target="_blank" rel="noopener noreferrer" className={styles.github}>
                       <FaGithub />
                       Código
                     </a>

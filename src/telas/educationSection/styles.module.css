@@ -21,7 +21,7 @@
 }
 
 .sectionHeader h2 span {
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .sectionHeader p {
@@ -42,18 +42,18 @@
 .educationContent {
   display: flex;
   gap: 2rem;
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.1);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .educationContent:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 122, 255, 0.2);
 }
 
 .educationIcon {
@@ -62,12 +62,12 @@
   justify-content: center;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  background: linear-gradient(135deg, #007aff, #0056cc);
   border-radius: 50%;
   color: #000;
   font-size: 2rem;
   flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3);
 }
 
 .educationDetails {
@@ -75,7 +75,7 @@
 }
 
 .educationDetails h3 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -98,7 +98,7 @@
 }
 
 .educationMeta svg {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1rem;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .certifications h3 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -153,8 +153,8 @@
 }
 
 .certificationItem {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.1);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -162,14 +162,14 @@
 }
 
 .certificationItem:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 122, 255, 0.2);
 }
 
 .certificationItem h4 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -185,8 +185,8 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(0, 212, 255, 0.2);
-  color: #00d4ff;
+  background: rgba(0, 122, 255, 0.2);
+  color: #007aff;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaHeart } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './styles.module.css';
 
 const Footer = () => {
@@ -47,9 +47,6 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <p>
             © {currentYear} Lucas Boroto. Todos os direitos reservados.
-          </p>
-          <p className={styles.madeWith}>
-            Feito com <FaHeart className={styles.heart} /> usando React + Vite
           </p>
         </div>
       </div>

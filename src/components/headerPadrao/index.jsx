@@ -6,10 +6,27 @@ import styles from './styles.module.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      const sections = ['home', 'about', 'experience', 'education', 'skills', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -24,36 +41,35 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'Sobre' },
+    { id: 'experience', label: 'Experiência' },
+    { id: 'education', label: 'Educação' },
+    { id: 'skills', label: 'Habilidades' },
+    { id: 'contact', label: 'Contato' }
+  ];
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerContainer}>
-        <Link to="home" className={styles.logo} smooth={true} duration={500}>
-          Lucas <span>Boroto</span>
-        </Link>
-
         <div className={styles.menuIcon} onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
         <nav className={`${styles.navbar} ${isMenuOpen ? styles.active : ''}`}>
-          <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
-            Home
-          </Link>
-          <Link to="about" smooth={true} duration={500} onClick={closeMenu}>
-            Sobre
-          </Link>
-          <Link to="experience" smooth={true} duration={500} onClick={closeMenu}>
-            Experiência
-          </Link>
-          <Link to="education" smooth={true} duration={500} onClick={closeMenu}>
-            Educação
-          </Link>
-          <Link to="skills" smooth={true} duration={500} onClick={closeMenu}>
-            Habilidades
-          </Link>
-          <Link to="contact" smooth={true} duration={500} onClick={closeMenu}>
-            Contato
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              to={item.id}
+              smooth={true}
+              duration={500}
+              onClick={closeMenu}
+              className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

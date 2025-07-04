@@ -52,7 +52,7 @@ const About = () => {
             <h3>Quem sou eu?</h3>
             <p>
               Sou Lucas Boroto, um desenvolvedor apaixonado por tecnologia e inovação. 
-              Atualmente estou cursando Análise e Desenvolvimento de Sistemas no terceiro semestre, 
+              Atualmente estou cursando Análise e Desenvolvimento de Sistemas no quarto semestre, 
               sempre buscando expandir meus conhecimentos e habilidades.
             </p>
             <p>

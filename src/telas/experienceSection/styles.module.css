@@ -21,7 +21,7 @@
 }
 
 .sectionHeader h2 span {
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .sectionHeader p {
@@ -43,7 +43,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, transparent, #00d4ff, transparent);
+  background: linear-gradient(to bottom, transparent, #007aff, transparent);
   transform: translateX(-50%);
 }
 
@@ -66,42 +66,25 @@
 }
 
 .experienceContent {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(0, 122, 255, 0.05);
+  border: 1px solid rgba(0, 122, 255, 0.1);
   border-radius: 15px;
   padding: 2rem;
   position: relative;
   transition: all 0.3s ease;
 }
 
-.experienceContent::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-  background: #00d4ff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
 
-.experienceItem:nth-child(odd) .experienceContent::before {
-  right: -60px;
-}
-
-.experienceItem:nth-child(even) .experienceContent::before {
-  left: -60px;
-}
 
 .experienceContent:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 122, 255, 0.2);
 }
 
 .experienceHeader h3 {
-  color: #00d4ff;
+  color: #007aff;
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -137,7 +120,7 @@
 
 .experienceDescription li::before {
   content: '▸';
-  color: #00d4ff;
+  color: #007aff;
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -151,12 +134,12 @@
 }
 
 .techTag {
-  background: rgba(0, 212, 255, 0.1);
-  color: #00d4ff;
+  background: rgba(0, 122, 255, 0.1);
+  color: #007aff;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  border: 1px solid rgba(0, 122, 255, 0.3);
 }
 
 .experienceLinks {
@@ -165,35 +148,26 @@
   flex-wrap: wrap;
 }
 
-.linkBtn {
+
+
+.github {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(0, 212, 255, 0.1);
-  color: #00d4ff;
-  text-decoration: none;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.linkBtn:hover {
-  background: #00d4ff;
-  color: #000;
-  transform: translateY(-2px);
-}
-
-.github {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .github:hover {
   background: #fff;
   color: #000;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -208,10 +182,7 @@
     text-align: left;
   }
 
-  .experienceItem:nth-child(odd) .experienceContent::before,
-  .experienceItem:nth-child(even) .experienceContent::before {
-    left: -40px;
-  }
+
 
   .experienceContent {
     padding: 1.5rem;

@@ -23,8 +23,8 @@
 }
 
 .sectionHeader h2 span {
-  color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  color: #007aff;
+  text-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
 }
 
 .sectionHeader p {
@@ -45,7 +45,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #00d4ff;
+  color: #007aff;
 }
 
 .aboutText p {
@@ -85,12 +85,12 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  background: linear-gradient(135deg, #007aff, #0056cc);
   border-radius: 50%;
   font-size: 1.5rem;
   color: #000;
   flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3);
 }
 
 .itemContent h4 {

@@ -20,25 +20,8 @@
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.logo span {
-  color: #00d4ff;
-}
-
-.logo:hover {
-  color: #00d4ff;
 }
 
 .menuIcon {
@@ -46,11 +29,14 @@
   font-size: 1.2rem;
   color: #fff;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .menuIcon:hover {
-  color: #00d4ff;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
 }
 
 .navbar {
@@ -58,20 +44,45 @@
   gap: 1.5rem;
 }
 
-.navbar a {
+.navLink {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
 }
 
-.navbar a:hover {
-  color: #00d4ff;
+.navLink:hover {
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.navLink.active {
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.15);
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #007aff;
+  border-radius: 1px;
 }
 
 @media (max-width: 768px) {
+  .headerContainer {
+    justify-content: flex-end;
+  }
+  
   .menuIcon {
     display: block;
   }
@@ -82,6 +93,7 @@
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     padding: 1.5rem;
     gap: 0.8rem;
@@ -89,16 +101,27 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .active {
+  .navbar.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 
-  .navbar a {
-    padding: 0.4rem 0;
+  .navLink {
+    padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .navLink:last-child {
+    border-bottom: none;
+  }
+
+  .navLink.active::after {
+    display: none;
   }
 } 
