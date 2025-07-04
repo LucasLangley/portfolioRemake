@@ -106,8 +106,6 @@
   line-height: 1.5;
   margin: 0;
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
   .about {
     padding: 60px 0;

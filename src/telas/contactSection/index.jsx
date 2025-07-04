@@ -25,7 +25,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simular envio do formulário
     setTimeout(() => {
       alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
       setFormData({
