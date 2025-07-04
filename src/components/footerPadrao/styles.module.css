@@ -1,0 +1,133 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 3rem 2rem 1rem;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerSection h3 {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footerSection h4 {
+  color: #00d4ff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footerSection p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerSection ul li a:hover {
+  color: #00d4ff;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerSocial a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid #00d4ff;
+  border-radius: 50%;
+  color: #00d4ff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footerSocial a:hover {
+  background: #00d4ff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBottom p {
+  color: #ccc;
+  margin: 0;
+}
+
+.madeWith {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heart {
+  color: #ff6b6b;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footerSocial {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+} 

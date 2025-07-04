@@ -1,0 +1,226 @@
+.education {
+  padding: 5rem 2rem;
+  background: #0f0f0f;
+}
+
+.educationContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h2 span {
+  color: #00d4ff;
+}
+
+.sectionHeader p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.educationTimeline {
+  margin-bottom: 4rem;
+}
+
+.educationItem {
+  margin-bottom: 2rem;
+}
+
+.educationContent {
+  display: flex;
+  gap: 2rem;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.educationContent:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.educationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  border-radius: 50%;
+  color: #000;
+  font-size: 2rem;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.educationDetails {
+  flex: 1;
+}
+
+.educationDetails h3 {
+  color: #00d4ff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.educationMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.educationMeta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.educationMeta svg {
+  color: #00d4ff;
+  font-size: 1rem;
+}
+
+.educationDescription {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.educationStatus {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ongoing {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.completed {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.certifications {
+  margin-top: 4rem;
+}
+
+.certifications h3 {
+  color: #00d4ff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certificationItem {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.certificationItem:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.certificationItem h4 {
+  color: #00d4ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.certificationItem p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.certificationYear {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .educationContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .educationIcon {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .educationMeta {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .educationStatus {
+    justify-content: center;
+  }
+
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+} 
