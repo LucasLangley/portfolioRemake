@@ -79,7 +79,7 @@ const Home = () => {
           </div>
 
             <p className={styles.description}>
-              Atualmente estudante de Análise e Desenvolvimento de Sistemas no terceiro semestre, 
+              Atualmente estudante de Análise e Desenvolvimento de Sistemas no quarto semestre, 
               em busca de oportunidades para adquirir conhecimento e experiência. 
               Sempre apto a aprender qualquer função e enfrentar novos desafios!
             </p>
