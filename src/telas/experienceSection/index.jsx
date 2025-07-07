@@ -4,7 +4,25 @@ import { FaGithub } from 'react-icons/fa';
 import styles from './styles.module.css';
 
 const Experience = () => {
-  const experiences = [
+  const professionalExperience = [
+    {
+      title: 'Desenvolvedor Full Stack',
+      role: 'Hermanos T.I',
+      period: 'Junho/2025 - Atualmente',
+      description: [
+        'Atuação como desenvolvedor full stack com foco no front-end',
+        'Desenvolvimento de aplicações web utilizando React',
+        'Trabalho em equipe com metodologias ágeis',
+        'Manutenção e evolução de sistemas existentes',
+        'Desenvolvimento e manutenção de bancos de dados Oracle'
+      ],
+      technologies: ['React', 'JavaScript', 'Full Stack', 'Metodologias Ágeis'],
+      link: null,
+      github: null
+    }
+  ];
+
+  const personalProjects = [
     {
       title: 'Desenvolvimento de Portfólio Pessoal',
       role: 'Desenvolvedor Front-end',
@@ -38,7 +56,7 @@ const Experience = () => {
     {
       title: 'Sistema de Monitoramento de Saúde Corporativa',
       role: 'Desenvolvedor Full-stack',
-      period: 'Julho/2024 – Novembro/2024',
+      period: 'Julho/2024',
       description: [
         'Desenvolvimento de aplicação completa para monitoramento de saúde corporativa',
         'Implementação de banco de dados Firebase para armazenamento seguro',
@@ -69,23 +87,48 @@ const Experience = () => {
       technologies: ['Flutter', 'Dart', 'Firebase', 'Gamificação'],
       link: null,
       github: null
-    },
-    {
-      title: 'Desenvolvedor Full Stack',
-      role: 'Hermanos T.I',
-      period: 'Junho/2025 - Atualmente',
-      description: [
-        'Atuação como desenvolvedor full stack com foco no front-end',
-        'Desenvolvimento de aplicações web utilizando React',
-        'Trabalho em equipe com metodologias ágeis',
-        'Manutenção e evolução de sistemas existentes',
-        'Desenvolvimento e manutenção de bancos de dados Oracle'
-      ],
-      technologies: ['React', 'JavaScript', 'Full Stack', 'Metodologias Ágeis'],
-      link: null,
-      github: null
     }
   ];
+
+  const renderExperienceItem = (exp, index) => (
+    <motion.div
+      key={index}
+      className={styles.experienceItem}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: index * 0.2 }}
+      viewport={{ once: true }}
+    >
+      <div className={styles.experienceContent}>
+        <div className={styles.experienceHeader}>
+          <h3>{exp.title}</h3>
+          <span className={styles.role}>{exp.role}</span>
+          <span className={styles.period}>{exp.period}</span>
+        </div>
+        
+        <ul className={styles.experienceDescription}>
+          {exp.description.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        <div className={styles.experienceTechnologies}>
+          {exp.technologies.map((tech, i) => (
+            <span key={i} className={styles.techTag}>{tech}</span>
+          ))}
+        </div>
+
+        <div className={styles.experienceLinks}>
+          {exp.github && (
+            <a href={exp.github} target="_blank" rel="noopener noreferrer" className={styles.github}>
+              <FaGithub />
+              Código
+            </a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
 
   return (
     <section id="experience" className={styles.experience}>
@@ -98,49 +141,39 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <h2>Experiência <span>Profissional</span></h2>
-          <p>Projetos e experiências que desenvolvi ao longo da minha jornada</p>
+          <p>Minha jornada profissional e projetos desenvolvidos</p>
         </motion.div>
 
-        <div className={styles.experienceTimeline}>
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className={styles.experienceItem}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className={styles.experienceContent}>
-                <div className={styles.experienceHeader}>
-                  <h3>{exp.title}</h3>
-                  <span className={styles.role}>{exp.role}</span>
-                  <span className={styles.period}>{exp.period}</span>
-                </div>
-                
-                <ul className={styles.experienceDescription}>
-                  {exp.description.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
+        <div className={styles.experienceSection}>
+          <motion.h3
+            className={styles.sectionTitle}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Atuação em Empresas
+          </motion.h3>
+          
+          <div className={styles.experienceTimeline}>
+            {professionalExperience.map((exp, index) => renderExperienceItem(exp, index))}
+          </div>
+        </div>
 
-                <div className={styles.experienceTechnologies}>
-                  {exp.technologies.map((tech, i) => (
-                    <span key={i} className={styles.techTag}>{tech}</span>
-                  ))}
-                </div>
-
-                <div className={styles.experienceLinks}>
-                  {exp.github && (
-                    <a href={exp.github} target="_blank" rel="noopener noreferrer" className={styles.github}>
-                      <FaGithub />
-                      Código
-                    </a>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className={styles.experienceSection}>
+          <motion.h3
+            className={styles.sectionTitle}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Projetos Pessoais
+          </motion.h3>
+          
+          <div className={styles.experienceTimeline}>
+            {personalProjects.map((exp, index) => renderExperienceItem(exp, index))}
+          </div>
         </div>
       </div>
     </section>

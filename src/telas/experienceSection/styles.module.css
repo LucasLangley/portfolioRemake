@@ -31,6 +31,31 @@
   margin: 0 auto;
 }
 
+.experienceSection {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #007aff, transparent);
+  border-radius: 2px;
+}
+
 .experienceTimeline {
   position: relative;
   margin-top: 4rem;
@@ -73,8 +98,6 @@
   position: relative;
   transition: all 0.3s ease;
 }
-
-
 
 .experienceContent:hover {
   background: rgba(0, 122, 255, 0.1);
@@ -148,8 +171,6 @@
   flex-wrap: wrap;
 }
 
-
-
 .github {
   display: flex;
   align-items: center;
@@ -182,8 +203,6 @@
     text-align: left;
   }
 
-
-
   .experienceContent {
     padding: 1.5rem;
   }
@@ -194,5 +213,9 @@
 
   .sectionHeader h2 {
     font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
   }
 } 
